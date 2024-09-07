@@ -25,3 +25,9 @@ n = len(y_arr)
 # Derivation: https://spia.uga.edu/faculty_pages/mlynch/teaching/ols/OLSDerivation.pdf
 weights = np.linalg.inv(x.transpose().dot(x)).dot(x.transpose()).dot(y)
 print("Weights:", weights)
+
+# Compute variance and standard deviation.
+y_predicted = x.dot(weights)
+variance = np.average((y - y_predicted)**2)
+print("variance:", variance)
+print("standard deviation:", math.sqrt(variance))

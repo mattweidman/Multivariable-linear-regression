@@ -22,7 +22,6 @@ y = x.dot(weights) + residuals
 # Write all to file
 with open('multivar.csv', 'w', newline='') as file:
     fieldnames = ['x' + str(i) for i in range(VARIABLES)] + ['y']
-    print(fieldnames)
     csvwriter = csv.DictWriter(file, fieldnames=fieldnames)
     csvwriter.writeheader()
     for i in range(ARRAY_LEN):
